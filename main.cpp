@@ -74,7 +74,7 @@ State State::Star(int k) {
 		int i = weight;
 		int cost = items[weight];
 		for (int j = 0; j < k; ++j) {
-			if (cache[i - 1][j] == INT_MAX) {
+			if (cache[i - 1][j] != INT_MAX) {
 				cache[i][j] = cache[i - 1][j];
 			}
 		}
